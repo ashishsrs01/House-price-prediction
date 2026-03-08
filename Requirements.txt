@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+Linear Regression
+Logistic Regression
+Random Forest
