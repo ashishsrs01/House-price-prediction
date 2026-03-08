@@ -41,7 +41,11 @@ Data[numerical_cols] = Data[numerical_cols].fillna(Data[numerical_cols].mean())
 # For categorical columns, we can fill missing values with the mode 
 Data[categorical_cols] = Data[categorical_cols].fillna(Data[categorical_cols].mode().iloc[0])
 
-# Encoding categorical variables using OneHotEncoder
+# Encode categorical variables using one-hot encoding
 df = pd.get_dummies(Data, columns=categorical_cols)
+
+print("\nData after preprocessing:")
+print(df.head())    
+print("\nPreprocessing completed successfully. The dataset is now ready for modeling.") 
 
 
