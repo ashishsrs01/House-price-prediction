@@ -2,7 +2,12 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
+import os
 
+# Change to the correct directory if needed
+if not os.path.exists("Data/train.csv"):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(os.path.dirname(script_dir))
 
 # Load Dataset
 Data = pd.read_csv("Data/train.csv")
@@ -46,6 +51,8 @@ df = pd.get_dummies(Data, columns=categorical_cols)
 
 print("\nData after preprocessing:")
 print(df.head())    
-print("\nPreprocessing completed successfully. The dataset is now ready for modeling.") 
+print("\nPreprocessing completed successfully. The dataset is now ready for modeling.")
 
+# Export df as module-level variable
+# This allows train_model.py to access the preprocessed dataframe
 
