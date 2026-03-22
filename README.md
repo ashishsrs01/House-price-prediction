@@ -84,6 +84,8 @@ Model performance is evaluated using standard regression metrics:
 * R² Score
 * Mean Absolute Error (MAE)
 * Root Mean Squared Error (RMSE)
+* Accuracy percentage 
+* Confusion matrics
 
 These metrics measure how accurately the model predicts house prices.
 
